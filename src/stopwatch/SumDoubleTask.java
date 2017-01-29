@@ -1,13 +1,29 @@
 package stopwatch;
 
+/**
+ * Add Double objects from an array.
+ * You need a large counter value to get a measurable time.
+ * @author Patinya Yongyai
+ *
+ */
 public class SumDoubleTask implements Runnable{
+	// size of the array used in floating point tasks.
+	// Don't make this too big to avoid slowing down test with paging
+	// or possible out-of-memory error.
 	static final int ARRAY_SIZE = 500000;
 	private int counter;
 	
+	/**
+	 * Constructor for creating SumDoubleTask.
+	 * @param counter the round of summation.
+	 */
 	public SumDoubleTask(int counter){
 		this.counter = counter;
 	}
 	
+	/**
+	 * Perform the task by summation of double from an array.
+	 */
 	@Override
 	public void run() {
 		// create array of values to add, before we start the timer
@@ -21,6 +37,9 @@ public class SumDoubleTask implements Runnable{
 		}
 	}
 	
+	/**
+	 * Return a descriptive name of the task.
+	 */
 	public String toString(){
 		return String.format("Sum array of Double objects with count=%,d", counter);
 	}

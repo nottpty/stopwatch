@@ -1,6 +1,16 @@
 package stopwatch;
 
+/**
+ * Compute and print the elapsed time for any task.
+ * @author Patinya Yongyai
+ *
+ */
 public class TaskTimer {
+	
+	/**
+	 * Runs a task, measures and prints its running time to the console.
+	 * @param runnable a task that we want to find the elapsed time.
+	 */
 	public static void measureAndPrint(Runnable runnable){
 		Stopwatch timer = new Stopwatch();
 		timer.start();

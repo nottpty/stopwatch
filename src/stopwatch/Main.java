@@ -1,7 +1,16 @@
 package stopwatch;
 
+/**
+ * A main class to create objects and run the program.
+ * @author Patinya Yongyai
+ *
+ */
 public class Main {
-	public static void main(String[] aergs){
+	/**
+	 * Creates the tasks and pass each task to the TaskTimer.
+	 * @param args not used
+	 */
+	public static void main(String[] args){
 		TaskTimer taskTimer = new TaskTimer();
 		Runnable[] tasks = { new AppendStringBuilderTask(100000),
 				new AppendStringTask(100000),
