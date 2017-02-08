@@ -11,6 +11,7 @@ public class SumDoublePrimitiveTask implements Runnable{
 	// Don't make this too big to avoid slowing down test with paging
 	// or possible out-of-memory error.
 	static final int ARRAY_SIZE = 500000;
+	private double[] values;
 	private int counter;
 	
 	/**
@@ -18,6 +19,7 @@ public class SumDoublePrimitiveTask implements Runnable{
 	 * @param counter the round of summation.
 	 */
 	public SumDoublePrimitiveTask(int counter){
+		values = new double[ARRAY_SIZE];
 		this.counter = counter;
 	}
 	
@@ -26,8 +28,6 @@ public class SumDoublePrimitiveTask implements Runnable{
 	 */
 	@Override
 	public void run() {
-		// create array of values to add before we start the timer
-		double[] values = new double[ARRAY_SIZE];
 		for(int k=0; k<ARRAY_SIZE; k++) values[k] = k+1;
 		double sum = 0.0;
 		// count = loop counter, i = array index value
