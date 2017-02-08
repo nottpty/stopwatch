@@ -12,8 +12,9 @@ public class Main {
 	 */
 	public static void main(String[] args){
 		TaskTimer taskTimer = new TaskTimer();
-		Runnable[] tasks = { new AppendStringBuilderTask(100000),
+		Runnable[] tasks = { new AppendStringTask(50000),
 				new AppendStringTask(100000),
+				new AppendStringBuilderTask(100000),
 				new SumBigDecimalTask(1000000000),
 				new SumDoublePrimitiveTask(1000000000),
 				new SumDoubleTask(1000000000)
